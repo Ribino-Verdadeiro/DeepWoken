@@ -1,0 +1,73 @@
+body{
+    height: 100vh;
+    background: linear-gradient(90deg, rgba(20,20,66,1) 0%, rgba(4,1,43,1) 100%);
+    margin: none;
+    padding: none;
+    display: flex;
+    justify-content: center;
+}
+#titulo{
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    cursor: none;
+    width: 20ch;
+    height: 3ch;
+    user-select: none;
+}
+
+.letras{
+    color: white;
+    height: 20px;
+    width: 20px;
+    font-size: 25px;
+}
+.letras:hover{
+    zoom: 150%;
+    cursor: none;
+}
+#area{
+    height: 300px;
+    width: 220px;
+    align-self: center;
+    margin-left: -170px;
+}
+
+#formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 178px;
+}
+.input{
+    padding: 10px;
+    margin: 5px;
+}
+
+.button{
+    font-size: 20px;
+    padding: 7.5px 15px;
+    border-radius: 6px;
+    color: #fff;
+    background: #222;
+    cursor: pointer;
+    border: none;
+    overflow: hidden;
+    transition: 0.2s;
+}
+.button:hover{
+    border-color: aqua;
+    border: 2px solid;
+    color:aqua;
+    animation: girar 2s;
+}
+
+@keyframes girar {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
