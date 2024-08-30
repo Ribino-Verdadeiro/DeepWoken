@@ -1,5 +1,6 @@
 <?php
 
+
 $servername='localhost'; // é o nosso servidor
 $username='root'; // usuario padrao do servidor local
 $password=''; //senha padrao do servidor local
@@ -15,7 +16,10 @@ if($conn->connect_error) { // verifica a conexão com o banco de dados, em caso 
 $nome = $_POST['nome'];
 $idade = $_POST['idade'];
 $email = $_POST['email'];
-$senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
+$senha = $_POST['senha'];
+
+include 'confirmarSenha.php';
+
 
 //essa variavel faz uma consulta no banco de dados, e coloca os dados do formulario na tabela do banco de dados
 $sql = "INSERT INTO usuarios (nome, idade, email, senha) VALUES('$nome','$idade','$email','$senha')";
@@ -23,7 +27,7 @@ $sql = "INSERT INTO usuarios (nome, idade, email, senha) VALUES('$nome','$idade'
 // Condição que diz se o usuario conseguiu se cadastrar ou se deu algum erro, e caso de erro apresenta o erro;
 
 if($conn->query($sql) === TRUE){
-    echo 'Usuario cadastrado com sucesso!';
+    header('Location: index.php?usuarioCadastradoComSucesso');
 }else{
     echo 'Erro: ' . $sql . '<br>' . $conn->error;
 }

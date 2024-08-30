@@ -4,16 +4,18 @@ body{
     margin: none;
     padding: none;
     display: flex;
-    justify-content: center;
 }
+
 #titulo{
     margin-top: 2%;
     display: flex;
     justify-content: center;
+    align-items: center;
     cursor: none;
     width: 20ch;
     height: 3ch;
     user-select: none;
+    margin-left: 40%;
 }
 
 .letras{
@@ -30,7 +32,8 @@ body{
     height: 300px;
     width: 220px;
     align-self: center;
-    margin-left: -170px;
+    margin-left: -330px;
+    margin-top: -100px;
 }
 
 #formulario{
@@ -60,14 +63,22 @@ body{
     border-color: aqua;
     border: 2px solid;
     color:aqua;
-    animation: girar 2s;
 }
 
-@keyframes girar {
-    from{
-        transform: rotate(0deg);
-    }
-    to{
-        transform: rotate(360deg);
-    }
+#area2{
+    height: 300px;
+    width: 220px;
+    align-self: center;
+    margin-top: -100px;
+    margin-left: 260px;
+}
+#formulario2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 178px;
+}
+h1{
+    color: white;
 }

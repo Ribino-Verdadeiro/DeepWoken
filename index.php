@@ -27,7 +27,7 @@
 
 
     <div id="area">
-
+        <h1> Criar conta </h1>
         <form id="formulario" autocomplete="off" action="cadastro.php" method="post">
 
             <input type="text" class='input' placeholder="Nome" id='nome' name="nome" required>
@@ -38,12 +38,29 @@
             <br>
             <input type="password" class='input' placeholder="Senha" id="senha" name="senha" required>
             <br>
-            <button class='button'> Enviar</button>
+            <input type='password' class='input' placeholder='confirmar-senha' id='confirmar-senha' name='confirmar-senha' required>
+            <br>
+            <button class='button'> Entrar </button>
 
          </form> 
 
     </div>
     
+    
+    <div id="area2">
+        <h1> Entrar </h1>
+        <form id="formulario2" autocomplete="off" action="entrar.php" method="post">
+
+            <input type="email" class='input' placeholder="Email" id="email-entrar" name="email-entrar" required>
+            <br>
+            <input type="password" class='input' placeholder="Senha" id="senha-entrar" name="senha-entrar" required>
+            <br>
+            <input class='button' type="submit" value="Entrar" id="entrar" name="entrar"><br>
+
+         </form> 
+
+    </div>
+
 </body>
 
 </html>
